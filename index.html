@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>三层塔 · 一个关于 MLP 的短篇</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stage">
+
+  <!-- 塔 -->
+  <div id="tower">
+    <div class="string"></div>
+
+    <div class="orb" id="orb-tan" style="left:26%;top:15%">
+      <span class="ring"></span>
+      <span class="tag">三层 · 塔恩</span>
+    </div>
+
+    <div class="orb" id="orb-sig" style="left:26%;top:35%">
+      <span class="ring"></span>
+      <span class="tag">二层 · 西格</span>
+    </div>
+
+    <div class="orb" id="orb-zero" style="left:26%;top:55%">
+      <span class="ring"></span>
+      <span class="tag">一层 · 阿零</span>
+    </div>
+
+    <div class="orb me" id="orb-me" style="left:26%;top:75%">
+      <span class="tag">你</span>
+    </div>
+  </div>
+
+  <div id="beam"></div>
+
+  <!-- 对白 -->
+  <div id="dialog">
+    <div id="hud"><span id="hud-k"></span><span id="hud-v"></span></div>
+    <div id="speaker"></div>
+    <div id="text"></div>
+    <div id="next">▼</div>
+  </div>
+
+  <div id="choices"></div>
+
+  <!-- 顶部 -->
+  <div id="topbar">
+    <span id="chap">序</span>
+    <button id="panel-btn" title="观测窗">观测窗</button>
+  </div>
+
+  <!-- 观测窗 -->
+  <aside id="panel">
+    <div class="p-head">
+      <span>观测窗</span>
+      <span id="epoch">未开始</span>
+    </div>
+    <svg id="net" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="p-loss">
+      <span class="k">损失 L</span>
+      <span class="v" id="loss-v">—</span>
+    </div>
+    <svg id="chart" viewBox="0 0 300 90" preserveAspectRatio="none"></svg>
+    <div class="p-foot" id="p-foot">—</div>
+  </aside>
+
+</div>
+
+<!-- 立绘 -->
+<div id="sprites"></div>
+
+<!-- 标题页 -->
+<div id="cover">
+  <div class="cover-inner">
+    <div class="cover-kicker">一个关于 MLP 的短篇</div>
+    <h1>三层塔</h1>
+    <p class="cover-sub">每天傍晚，塔替人回答同一个问题。<br>它有三层，三个住客，和一扇只朝一个方向开的门。<br><span class="plain">说白了：一句话往上走三层，每层改一点，最后变成一句回答。</span></p>
+    <button id="start">走进去</button>
+    <div class="cover-hint">点击 / 空格 继续　·　右上角可以打开观测窗</div>
+  </div>
+</div>
+
+<!-- 结局页 -->
+<div id="ending">
+  <div class="end-inner">
+    <div class="end-kicker" id="end-kicker">结局</div>
+    <h2 id="end-title"></h2>
+    <div id="end-body"></div>
+    <button id="again">再来一次</button>
+  </div>
+</div>
+
+<script src="mlp.js"></script>
+<script src="viz.js"></script>
+<script src="sprites.js"></script>
+<script src="engine.js"></script>
+<script src="story.js"></script>
+</body>
+</html>
